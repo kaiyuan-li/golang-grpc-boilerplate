@@ -1,17 +1,17 @@
 Boilerplate GoLang + gRPC + Bazel
 =================================
 
-# Run `build_cleaner`
-
-```
-bazel run //:gazelle
-```
-
-
 # To run the `go_binary`
 
 ```
 bazel build src:main
+```
+
+# To run the greeting gRPC service
+
+```
+bazel run src/greet/server:greet_server
+bazel run src/greet/client:greet_client
 ```
 
 # Notes

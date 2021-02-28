@@ -29,6 +29,7 @@ func main() {
 	}
 	s := grpc.NewServer()
 	pb.RegisterGreetingServiceServer(s, &server{})
+	log.Print("Greeting server successfully started...")
 	if err := s.Serve(lis); err != nil {
 		log.Fatalf("failed to serve: %v", err)
 	}
